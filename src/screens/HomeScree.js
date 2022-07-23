@@ -24,7 +24,7 @@ function HomeScreen(props) {
             <MessageBox variant="danger">{error}</MessageBox>
           ) : (
             <div className="mixercontainer">
-              {products.map((product) => (
+              {Array.from(products).map((product) => (
                 <Product key={product._id} product={product} />
               ))}
             </div>
